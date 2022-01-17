@@ -33,9 +33,16 @@ function isComposable(var ransomNote, var magazine) {
     if (magazineArr.length() < ransomArr.length())
         return false;
 
+    // sort the array based on alphanumeric value
+    ransomArr.sort();
+    magazineArr.sort();
+
+    var letter = ransomArr[0];
     // loop the ransom note, and find the match and pop the matching element from the magazine
     for (var x = 0; x < ransomArr.length(); x++) {
-
+        if (letter == magazineArr[x]) {
+            magazineArr.slice(x, 1);                // remove element at current position from the magazine
+        }
+        letter = ransomArr[x];
     }
-
 }

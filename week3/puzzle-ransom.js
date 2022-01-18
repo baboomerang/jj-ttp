@@ -42,7 +42,10 @@ function isComposable(var ransomNote, var magazine) {
     for (var x = 0; x < ransomArr.length(); x++) {
         if (letter == magazineArr[x]) {
             magazineArr.slice(x, 1);                // remove element at current position from the magazine
+        } else {
+            return false;
         }
         letter = ransomArr[x];
     }
+    // TODO: pop/skip over duplicate unneeded elements of the magazine array
 }

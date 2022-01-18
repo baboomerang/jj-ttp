@@ -1,0 +1,26 @@
+# Create et access project folder
+mkdir project_name
+cd project_name
+
+# Create Python virtual env
+python3.10 -m venv venv             # create a python 3.10 virtual enviornment
+python3.8 -m venv venv              # create a python 3.8 virtual enviornment
+python3.9 -m venv venv              # create a python 3.9 virtual enviornment
+python -m venv venv                 # uses default symlinked system python version
+
+# Virtual enviornments are created in the folder the command is run in
+# You must have access to the folder to activate that enviornment
+
+# Activate virtual env
+source venv/bin/activate
+
+# If you want to deactivate virtual env
+deactivate
+
+# Install django (~= same as 3.1.*)
+pip install django~=3.1.0
+python -m pip install django~=3.1.0
+
+# You can also install exact versions of packages using (==)
+pip install django==4.0.1
+python -m pip install django==4.0.1

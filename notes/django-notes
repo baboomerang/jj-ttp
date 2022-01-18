@@ -1,0 +1,31 @@
+# display django version installed
+#     sometimes you need to use specific python versions like python3.8
+#     so "python3.8 -m django"
+python -m django --version
+django-admin --version
+
+# create a new django project folder and
+django-admin startproject {project-name}
+
+# run the backend server by default at port 8001
+python manage.py runserver
+
+# create a new django app
+python manage.py startapp {app-name}
+
+# create an admin page for the django project
+# then type in a username and password
+python manage.py createsuperuser
+
+# if there is an auth_user error when making the superuser,
+# (django might have complained about unapplied migrations)
+python manage.py makemigrations
+python manage.py migrate
+# once migrations take place, then you can try creating the super user again
+
+
+# find and delete the superuser account if forgotten password
+python manage.py shell
+# now once in the django shell, run these two commands
+from django.contrib.auth.models import User
+User.objects.get(username="insert-username-here", is_superuser=True).delete()

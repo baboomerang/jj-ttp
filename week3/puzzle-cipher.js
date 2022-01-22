@@ -2,7 +2,7 @@
 // Javascript Puzzle #2 - JJTTP Winter 2022
 //
 // By: Ilan Rodriguez
-// January 17, 2022
+// January 21, 2022
 //////////////////////////////////////////////////////
 
 

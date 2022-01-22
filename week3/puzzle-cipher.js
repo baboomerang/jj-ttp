@@ -12,7 +12,7 @@ function encode_caesar(plainText, shift) {
     let cypherText = ""
     let alphabet = "abcdefghijklmnopqrstuvwxyz"     // lookup table for the letters
 
-    for (let i = 0; i < plainText.length; i++) {    // loop from 0 to the end of the plaintext
+    for (let i = 0; i < plainText.length; ++i) {    // loop from 0 to the end of the plaintext
         const character = plainText.charAt(i)       // get the character at index
         const position = alphabet.search(character) // get the index from the lookup table
 
